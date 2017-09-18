@@ -1,0 +1,87 @@
+Introduction
+- been programming over 18 years, started as an intern at Sun Microsystems Australia
+- worked in London for Goldman Sachs, Morgan Stanley, Credit Suisse, market risk, prime brokerage, equity sales
+- worked in SF and currently working at eHarmony
+
+Aspirations - activity
+- love writing games, love business
+- dream is to work on my apps full-time
+
+Why learn coding/app development?
+
+A Sense of Self-Reliance and Empowerment
+ - After building a website or application – even a simple one – there is always a feeling of accomplishment.
+
+It’s Possible to Make Your Side Project Dreams into Reality
+- If you have an amazing idea for a game or app you don't have to wait, you can take action and make it a reality.
+
+A Sense of Freedom
+- more opportunities to work remotely, less focus on hours worked and more focus on productivity, more freedom to determine your own schedule.
+
+Games and apps are cool!
+
+"Coders change the world. They build new, amazing things faster than ever before. Anyone with imagination can learn to write code."
+– Jeff Wilke SVP Consumer Business, Amazon.com
+
+"Learning to write programs stretches your mind, and helps you think better, creates a way of thinking about things that I think is helpful in all domains."
+- Bill Gates Chairman, Microsoft
+
+What makes a good programmer?
+- tenacity (patience), when you struggle you will need be anchored to some goal otherwise it's easy to give up
+- focus (drive/passion will fuel your tenacity, Bill Gates and Warren Buffet), one thing at a time, one small step at a time, don't get distracted
+- humility (hunger to learn, openess to new ideas)
+
+Some goals
+
+Highest Level
+- Programming is about breaking things down
+
+- learn from each other on how to build a successful app (popular/revenue-generating/passive income) - I can't teach this yet
+- teach you how to write a good app (quality)
+- teach you how to think strategically about business,
+  - android or iPhone
+  - how to prioritize features, e.g. foundation work vs new features, learning to make trade-offs between time, money and quality
+  - how to monetize
+  - how to go about investing in building the best ideas, POC
+- teach you how to write a basic app
+- teach you how to code, think of scales when learning piano
+
+Bonus
+- would like to assemble a team and to and enter the programming competition
+- networking, never know maybe we could help each other out someday... I am working on some cool side-projects with other veterans and might be interested in involving some of you.
+
+Immersion vs Structure
+- how do you learn a new language?
+
+Basic Concepts
+
+Constants
+Variables
+Types - Int, Double, Bool
+Type Safety/Inference
+Optionals - the concept of nil
+Assignment
+Operators - * + - / % +=
+Comparison == != > < >= <=
+Arrays
+Loops
+Conditionals
+
+Print some shapes
+Square
+Triangle
+Determine if a number is prime
+Print first N primes
+
+Assignment
+Print spaced triangle
+Print spaced diamond
+
+Lesson 2
+
+Create a multiple-choice quiz
+
+1. Have a blank MVC load
+2. Add a label
+3. Add a custom view
+4. Introduce a model
