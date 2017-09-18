@@ -29,19 +29,46 @@ printTriangle2(rows: 10)
 
 // print half diamond
 
+// half diamond
+//
+// #
+// ##
+// ###
+// ####
+// ###
+// ##
+// #
+
 func printHalfDiamond(rows: Int) {
-    for i in 1 ... rows {
+    let halfway = rows / 2
+    for i in 1 ... halfway {
         let row = String(repeating: "#", count: i)
         print(row)
     }
-    for i in 1 ... rows {
+    for i in halfway ... rows {
         let row = String(repeating: "#", count: rows - i)
         print(row)
     }
 }
 
-print("half diamond 1")
-printHalfDiamond(rows: 4)
+func printHalfDiamond2(rows: Int) {
+    let halfway = rows / 2 + 1
+    for i in 1 ... rows {
+        var row = ""
+        if i <= halfway {
+            row = String(repeating: "#", count: i)
+        } else {
+            row = String(repeating: "#", count: rows - i + 1)
+        }
+        print(row)
+    }
+}
+
+print("half diamond")
+printHalfDiamond(rows: 11)
+
+print("half diamond2")
+printHalfDiamond2(rows: 9)
 
 
 //  *  |2-1-2 0
