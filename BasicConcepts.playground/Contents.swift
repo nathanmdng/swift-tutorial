@@ -2,6 +2,37 @@
 
 import UIKit
 
+func printTest(string: String, times: Int) {
+    for i in 0 ... times {  // 0, 1, 2, 3, 4
+        print("hello \(string) \(i)")
+    }
+}
+
+printTest(string: "Ruth", times: 8)
+
+func testingLessThan(number: Int) {
+    if number > 10 {
+        print("greater than 10")
+    } else {
+        print("less than 10")
+    }
+}
+
+testingLessThan(number: 12)
+testingLessThan(number: 7)
+
+// print a square
+// ###
+// ###
+// ###
+
+func printSquare(size: Int) {
+    for _ in 1 ... size {
+        let row = String(repeating: "*", count: size)
+        print(row)
+    }
+}
+
 // print a triangle
 
 func printTriangle(rows: Int) {
