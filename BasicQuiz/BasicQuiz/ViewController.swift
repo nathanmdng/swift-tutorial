@@ -16,7 +16,10 @@ class ViewController: UIViewController {
     
     func processAnswer(_ sender: UITapGestureRecognizer) {
         let choiceLabel: UILabel = sender.view as! UILabel
-        choiceLabel.tag == 1 ? print("correct") : print("wrong")
+        let message = choiceLabel.tag == 1 ? "Correct" : "Wrong"
+        let alertController = UIAlertController(title: "Answer", message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
     }
 
 }
