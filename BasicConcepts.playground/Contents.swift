@@ -100,12 +100,31 @@ func printHalfDiamond2(rows: Int) {
     }
 }
 
+// write a function that prints half a diamond
+
+func printHalfDiamond3(rows: Int) {
+    var row = ""
+    let halfway = rows / 2
+    for i in 0 ... rows - 1 {
+        if i <= halfway {
+            row.append("#")
+            print(row)
+        } else {
+            let index = row.index(row.startIndex, offsetBy: row.characters.count - 1)
+            row = row.substring(to: index)
+            print(row)
+        }
+    }
+}
+
 print("half diamond")
 printHalfDiamond(rows: 11)
 
-print("half diamond2")
+print("half diamond 2")
 printHalfDiamond2(rows: 9)
 
+print("half diamond 3")
+printHalfDiamond3(rows: 7)
 
 //  *  |2-1-2 0
 // *** |1-3-1 1
