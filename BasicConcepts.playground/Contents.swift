@@ -33,7 +33,14 @@ func printSquare(size: Int) {
     }
 }
 
-// print a triangle
+// write a function that prints a triangle
+
+// 4
+//
+// #
+// ##
+// ###
+// ####
 
 func printTriangle(rows: Int) {
     for i in 1 ... rows {
@@ -43,11 +50,9 @@ func printTriangle(rows: Int) {
 }
 
 func printTriangle2(rows: Int) {
-    for i in 1 ... rows {
-        var row = ""
-        for _ in 1 ... i {
-            row.append("#")
-        }
+    var row = ""
+    for _ in 0 ... rows - 1 {
+        row.append("#")
         print(row)
     }
 }
