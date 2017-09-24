@@ -154,6 +154,15 @@ func printSpacedTriangle(rows: Int) {
 
 printSpacedTriangle(rows: 3)
 
+func factorial(number: Int) -> Int {
+    var output = 1
+    for i in 1 ... number {
+        output *= i
+    }
+    return output
+}
+
+print(factorial(number: 5))
 
 func isPrime(number: Int) -> Bool {
     if (number <= 1) {
@@ -184,7 +193,6 @@ isPrime(number: 13)
 isPrime(number: 15)
 isPrime(number: 17)
 print(getPrimes(limit: 100))
-
 
 func calculateBinary(value: String) -> Decimal {
     let length = value.characters.count
