@@ -2,7 +2,45 @@
 
 import UIKit
 
-// print a triangle
+func printTest(string: String, times: Int) {
+    for i in 0 ... times {  // 0, 1, 2, 3, 4
+        print("hello \(string) \(i)")
+    }
+}
+
+printTest(string: "Ruth", times: 8)
+
+func testingLessThan(number: Int) {
+    if number > 10 {
+        print("greater than 10")
+    } else {
+        print("less than 10")
+    }
+}
+
+testingLessThan(number: 12)
+testingLessThan(number: 7)
+
+// print a square
+// ###
+// ###
+// ###
+
+func printSquare(size: Int) {
+    for _ in 1 ... size {
+        let row = String(repeating: "*", count: size)
+        print(row)
+    }
+}
+
+// write a function that prints a triangle
+
+// 4
+//
+// #
+// ##
+// ###
+// ####
 
 func printTriangle(rows: Int) {
     for i in 1 ... rows {
@@ -12,11 +50,9 @@ func printTriangle(rows: Int) {
 }
 
 func printTriangle2(rows: Int) {
-    for i in 1 ... rows {
-        var row = ""
-        for _ in 1 ... i {
-            row.append("#")
-        }
+    var row = ""
+    for _ in 0 ... rows - 1 {
+        row.append("#")
         print(row)
     }
 }
@@ -29,20 +65,66 @@ printTriangle2(rows: 10)
 
 // print half diamond
 
+// half diamond
+//
+// #
+// ##
+// ###
+// ####
+// ###
+// ##
+// #
+
 func printHalfDiamond(rows: Int) {
-    for i in 1 ... rows {
+    let halfway = rows / 2
+    for i in 1 ... halfway {
         let row = String(repeating: "#", count: i)
         print(row)
     }
-    for i in 1 ... rows {
+    for i in halfway ... rows {
         let row = String(repeating: "#", count: rows - i)
         print(row)
     }
 }
 
-print("half diamond 1")
-printHalfDiamond(rows: 4)
+func printHalfDiamond2(rows: Int) {
+    let halfway = rows / 2 + 1
+    for i in 1 ... rows {
+        var row = ""
+        if i <= halfway {
+            row = String(repeating: "#", count: i)
+        } else {
+            row = String(repeating: "#", count: rows - i + 1)
+        }
+        print(row)
+    }
+}
 
+// write a function that prints half a diamond
+
+func printHalfDiamond3(rows: Int) {
+    var row = ""
+    let halfway = rows / 2
+    for i in 0 ... rows - 1 {
+        if i <= halfway {
+            row.append("#")
+            print(row)
+        } else {
+            let index = row.index(row.startIndex, offsetBy: row.characters.count - 1)
+            row = row.substring(to: index)
+            print(row)
+        }
+    }
+}
+
+print("half diamond")
+printHalfDiamond(rows: 11)
+
+print("half diamond 2")
+printHalfDiamond2(rows: 9)
+
+print("half diamond 3")
+printHalfDiamond3(rows: 7)
 
 //  *  |2-1-2 0
 // *** |1-3-1 1
@@ -72,6 +154,15 @@ func printSpacedTriangle(rows: Int) {
 
 printSpacedTriangle(rows: 3)
 
+func factorial(number: Int) -> Int {
+    var output = 1
+    for i in 1 ... number {
+        output *= i
+    }
+    return output
+}
+
+print(factorial(number: 5))
 
 func isPrime(number: Int) -> Bool {
     if (number <= 1) {
@@ -103,7 +194,6 @@ isPrime(number: 15)
 isPrime(number: 17)
 print(getPrimes(limit: 100))
 
-
 func calculateBinary(value: String) -> Decimal {
     let length = value.characters.count
     var sum: Decimal = 0
@@ -118,3 +208,49 @@ func calculateBinary(value: String) -> Decimal {
 
 print(calculateBinary(value: "1010"))
 
+func rockPaperScissors(value: String) {
+    let letters = Array(value.characters)
+    let games = value.characters.count
+    var aWins = 0
+    var bWins = 0
+    for i in stride(from: 0, to: games, by: 2) {
+        let playerA = letters[i]
+        let playerB = letters[i + 1]
+        let winner = whoWins(a: playerA, b: playerB)
+        if (winner == 1) {
+            print("A wins")
+            aWins += 1
+        } else if (winner == 2) {
+            print("B wins")
+            bWins += 1
+        } else {
+            print("draw")
+        }
+    }
+    if (aWins > bWins) {
+        print("A wins tournament")
+    } else if (bWins > aWins) {
+        print("B wins tournament")
+    } else {
+        print("Tournament is a draw")
+    }
+}
+
+func whoWins(a: Character, b: Character) -> Int {
+    if a == "R" && b == "P" {
+        return 2
+    } else if a == "R" && b == "S" {
+        return 1
+    } else if a == "P" && b == "S" {
+        return 2
+    } else if a == "P" && b == "R" {
+        return 1
+    } else if a == "S" && b == "R" {
+        return 2
+    } else if a == "S" && b == "P" {
+        return 1
+    }
+    return 0
+}
+
+rockPaperScissors(value: "RRRSSRSPPPPSRP")
