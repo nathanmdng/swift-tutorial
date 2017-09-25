@@ -161,10 +161,25 @@ func isPrime(number: Int) -> Bool {
     } else if (number == 2) {
         return true
     }
-    for i in (2 ... number-1).reversed() {
+    for i in 2 ... number - 1 {
         if (number % i == 0) {
             return false
         }
+    }
+    return true
+}
+
+func isPrime2(number: Int) -> Bool {
+    if (number <= 1) {
+        return false
+    }
+    let halfway = number / 2
+    var i = 2
+    while (i < halfway + 1) {
+        if (number % i == 0) {
+            return false
+        }
+        i += 1
     }
     return true
 }
