@@ -29,8 +29,8 @@ testingLessThan(number: 7)
 // ###
 
 func printSquare(size: Int) {
+    let row = String(repeating: "*", count: size)
     for _ in 1 ... size {
-        let row = String(repeating: "*", count: size)
         print(row)
     }
 }
