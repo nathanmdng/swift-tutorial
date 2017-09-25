@@ -124,33 +124,22 @@ printHalfDiamond3(rows: 7)
 
 // Print a spaced triangle
 //
-//  *   |2-1-2 0
-// ***  |1-3-1 1
-//***** |0-5-0 2
+//   *    | 3-1
+//  ***   | 2-3
+// *****  | 1-5
+//******* | 0-7
 
 func printSpacedTriangle(rows: Int) {
-    if (rows % 2 == 1) {
-        let base = rows * 2 - 1     // 5
-        var spaces = base / 2       // 5/2 = 2
-        for _ in 0 ... rows - 1 {   // 0, 1, 2
-            var row = ""
-            if spaces > 0 {
-                for _ in 0 ... spaces - 1 {
-                    row.append(" ")
-                }
-            }
-            for _ in 1 ... base - 2 * spaces {
-                row.append("*")
-            }
-            spaces -= 1
-            print(row)
-        }
-    } else {
-        print("need an odd number")
+    for i in 0 ... rows - 1 {
+        let width = 2 * i + 1
+        let spaceAmount = rows - i - 1
+        let space = String(repeating: " ", count: spaceAmount)
+        let stars = String(repeating: "*", count: width)
+        print("\(space)\(stars)")
     }
 }
 
-printSpacedTriangle(rows: 3)
+printSpacedTriangle(rows: 4)
 
 // factorial 5! = 120
 
