@@ -88,13 +88,11 @@ func printHalfDiamond(rows: Int) {
 func printHalfDiamond2(rows: Int) {
     let halfway = rows / 2 + 1
     for i in 1 ... rows {
-        var row = ""
         if i <= halfway {
-            row = String(repeating: "#", count: i)
+            print(String(repeating: "#", count: i))
         } else {
-            row = String(repeating: "#", count: rows - i + 1)
+            print(String(repeating: "#", count: rows - i + 1))
         }
-        print(row)
     }
 }
 
@@ -104,12 +102,11 @@ func printHalfDiamond3(rows: Int) {
     for i in 0 ... rows - 1 {
         if i <= halfway {
             row.append("#")
-            print(row)
         } else {
             let index = row.index(row.startIndex, offsetBy: row.characters.count - 1)
             row = row.substring(to: index)
-            print(row)
         }
+        print(row)
     }
 }
 
