@@ -170,9 +170,8 @@ func isPrime2(number: Int) -> Bool {
     if (number <= 1) {
         return false
     }
-    let halfway = number / 2
     var i = 2
-    while (i < halfway + 1) {
+    while (i < number / 2 + 1) {
         if (number % i == 0) {
             return false
         }
