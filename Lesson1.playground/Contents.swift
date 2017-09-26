@@ -169,9 +169,12 @@ func isPrime(number: Int) -> Bool {
 func isPrime2(number: Int) -> Bool {
     if (number <= 1) {
         return false
+    } else if (number == 2) {
+        return true
     }
     var i = 2
-    while (i < number / 2 + 1) {
+    let max = Int(ceil(sqrt(Double(number))))
+    while (i < max + 1) {
         if (number % i == 0) {
             return false
         }
