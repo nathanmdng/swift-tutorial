@@ -62,3 +62,25 @@ func whoWins(a: Character, b: Character) -> Int {
 }
 
 rockPaperScissors(value: "RRRSSRSPPPPSRP")
+
+func printSpacedDiamond(rows: Int) {
+    let half = rows / 2
+    for i in 0 ... half {
+        let spaceCount = half - i
+        let starCount = rows - spaceCount * 2
+        let spaces = String(repeating: " ", count: spaceCount)
+        let stars = String(repeating: "*", count: starCount)
+        print("\(spaces)\(stars)")
+    }
+    for i in half ..< rows - 1{
+        let spaceCount = i + 1 - half
+        let starCount = rows - spaceCount * 2
+        let spaces = String(repeating: " ", count: spaceCount)
+        let stars = String(repeating: "*", count: starCount)
+        print("\(spaces)\(stars)")
+    }
+}
+
+print("spaced diamond")
+
+printSpacedDiamond(rows: 7)
