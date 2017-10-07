@@ -84,3 +84,33 @@ func printSpacedDiamond(rows: Int) {
 print("spaced diamond")
 
 printSpacedDiamond(rows: 7)
+
+func factorial(number: Int) -> Int {
+    if number == 1 {
+        return number
+    } else {
+        return number * factorial(number: number - 1)
+    }
+}
+
+print(factorial(number: 5))
+
+func fibonacci(_ number: Int) -> Int {
+    if number <= 2 {
+        return 1
+    } else {
+        return fibonacci(number - 1) + fibonacci(number - 2)
+    }
+}
+
+func fibonacciSequence(_ limit: Int) -> [Int] {
+    var sequence = [Int]()
+    for i in 0 ... 10 {
+        sequence.append(fibonacci(i))
+    }
+    return sequence
+}
+
+print(fibonacci(5))
+// 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
+print(fibonacciSequence(10))
